@@ -1,4 +1,4 @@
-Session #01 - 16/8/2024
+Session #01 - 16/8/2024  - 03:47
 =======================
 - Index: DONE
 - Search: DONE 
@@ -6,5 +6,20 @@ Session #01 - 16/8/2024
 - Posts: DONE
 - Faqs: DONE
 - Errors: DONE
-- Contact
+- Contact: DONE
+
+
+
 - Price
+- About
+- Category
+- Services-1
+- Services-2
+- Services-details-1
+- Services-details-2
+- team
+- team-details
+
+
+- Index-2
+- Index-3
