@@ -1,0 +1,77 @@
+:root {
+    --bs-font-sans-serif: "Rubik", sans-serif;
+    --bs-body-font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a,
+.nav-link {
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.bx {
+    font-size: inherit;
+}
+
+.hero-slide .swiper .swiper-slide {
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 600;
+    margin: 1.5rem 0;
+}
+
+.section-subtitle {
+    position: relative;
+    padding-left: 55px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.section-subtitle::before,
+.section-subtitle::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 35px;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    text-align: right;
+    top: 50%;
+}
+
+.section-subtitle::before {
+    width: 45px;
+    bottom: 5px;
+    top: 25%;
+}
+
+.section-subtitle::after {
+    left: 10px;
+}
