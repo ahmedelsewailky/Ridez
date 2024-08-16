@@ -24,7 +24,7 @@ $(function () {
 /**
  * Preloader
  */
-$(function() {
+$(function () {
     $(window).on('load', function () {
         $('#preloader').fadeOut('slow', function () {
             $('body').css('overflow', 'auto');
@@ -43,13 +43,13 @@ $(function () {
         $('#search-popup').fadeIn(300, function () {
             $(this).addClass('show');
         });
-        $('body').css('overflow', 'hidden'); 
+        $('body').css('overflow', 'hidden');
     });
 
     // Close the search window when you press the close button.
     $('.close-btn').click(function () {
         $('#search-popup').removeClass('show').fadeOut(300, function () {
-            $('body').css('overflow', ''); 
+            $('body').css('overflow', '');
         });
     });
 
@@ -64,6 +64,19 @@ $(function () {
 });
 
 
+/**
+ * Get Search Keyword
+ * 
+ * @page search.html
+ */
+$(function () {
+    var urlParams = new URLSearchParams(window.location.search);
+    var keyword = urlParams.get('q');
+    if (keyword) {
+        $('.search-keyword').text(keyword);
+        $('#search-input').val(keyword);
+    }
+})
 
 /**
  * Hero Slide at Header

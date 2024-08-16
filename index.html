@@ -32,6 +32,7 @@
             </div>
         </div>
 
+        
         <div class="topbar">
             <div class="container">
                 <div class="row">
@@ -876,7 +877,7 @@
                 <div class="swiper blog-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card post-card">
                                 <img src="https://via.placeholder.com/320x250" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="post-meta">
@@ -890,7 +891,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card post-card">
                                 <img src="https://via.placeholder.com/320x250" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="post-meta">
@@ -904,7 +905,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card post-card">
                                 <img src="https://via.placeholder.com/320x250" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="post-meta">
@@ -918,7 +919,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card post-card">
                                 <img src="https://via.placeholder.com/320x250" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="post-meta">
@@ -932,7 +933,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card post-card">
                                 <img src="https://via.placeholder.com/320x250" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="post-meta">
@@ -946,7 +947,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card post-card">
                                 <img src="https://via.placeholder.com/320x250" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="post-meta">
@@ -1112,11 +1113,13 @@
 
         <div id="search-popup">
             <div class="search-content">
-                <form>
+                <form action="search.html" method="get">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="ابحث هنا...">
+                        <input type="search" class="form-control" name="q" placeholder="Type to search ...">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">بحث</button>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="bx bx-search"></i>
+                    </button>
                 </form>
             </div>
             <button class="close-btn">&times;</button>
