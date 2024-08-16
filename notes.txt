@@ -1,10 +1,10 @@
 Session #01 - 16/8/2024
 =======================
-- Index
-- Search --> Posts --> Single
-- Faqs
-- Price
+- Index: DONE
+- Search: DONE 
+- Single: DONE
+- Posts: DONE
+- Faqs: DONE
+- Errors: DONE
 - Contact
-- Errors
-- Posts
-- Single
+- Price
