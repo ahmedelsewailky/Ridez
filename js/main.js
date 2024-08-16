@@ -20,30 +20,44 @@ $(function () {
 });
 
 
+
+/**
+ * Preloader
+ */
+$(function() {
+    $(window).on('load', function () {
+        $('#preloader').fadeOut('slow', function () {
+            $('body').css('overflow', 'auto');
+            $('.content').fadeIn('slow');
+        });
+    });
+});
+
+
 /**
  * Pop-Up Search From Navbar Button
  */
 $(function () {
-    // فتح نافذة البحث عند الضغط على أيقونة البحث
+    // Open search window when you click on search icon
     $('#search-icon').click(function () {
         $('#search-popup').fadeIn(300, function () {
             $(this).addClass('show');
         });
-        $('body').css('overflow', 'hidden'); // منع التمرير
+        $('body').css('overflow', 'hidden'); 
     });
 
-    // إغلاق نافذة البحث عند الضغط على زر الإغلاق
+    // Close the search window when you press the close button.
     $('.close-btn').click(function () {
         $('#search-popup').removeClass('show').fadeOut(300, function () {
-            $('body').css('overflow', ''); // إعادة التمرير
+            $('body').css('overflow', ''); 
         });
     });
 
-    // إغلاق نافذة البحث عند الضغط في أي مكان خارج نموذج البحث
+    // Close the search window when clicking anywhere outside the search form.
     $('#search-popup').click(function (e) {
         if ($(e.target).closest('.search-content').length === 0) {
             $(this).removeClass('show').fadeOut(300, function () {
-                $('body').css('overflow', ''); // إعادة التمرير
+                $('body').css('overflow', '');
             });
         }
     });
