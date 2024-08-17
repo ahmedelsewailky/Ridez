@@ -16,14 +16,15 @@ Session #02 - 17/8/2024  - 01:10
 - team: DONE
 - team-details: DONE
 - Faqs-2: DONE
+- Price: DONE
 
-- Price
-- Category
 - Services-1
 - Services-2
 - Services-details-1
 - Services-details-2
-
+- Our Stor
+- Cart
+- Checkout
 
 - Index-2
 - Index-3
