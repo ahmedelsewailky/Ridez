@@ -4,21 +4,25 @@ Session #01 - 16/8/2024  - 03:47
 - Search: DONE 
 - Single: DONE
 - Posts: DONE
-- Faqs: DONE
+- Faqs-1: DONE
 - Errors: DONE
 - Contact: DONE
 
 
 
+Session #02 - 17/8/2024  - 01:10
+=======================
+- About: DONE
+- team: DONE
+- team-details: DONE
+- Faqs-2: DONE
+
 - Price
-- About
 - Category
 - Services-1
 - Services-2
 - Services-details-1
 - Services-details-2
-- team
-- team-details
 
 
 - Index-2
