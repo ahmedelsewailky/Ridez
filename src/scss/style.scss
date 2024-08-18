@@ -1,3 +1,79 @@
-@import 'variables';
+// scss-docs-start color-variables
+$blue:    #0d6efd !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #198754 !default;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
+$emarled: #10B981 !default;
+$dark: #1E293B !default;
+// scss-docs-end color-variables
 
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+$mainColor: $emarled;
+$darkColor: $dark;
+
+$fontSize: 14px;
+body {
+    font-size: $fontSize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: 0;
+}
+
+a,
+.nav-link {
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+}
+
+.bx {
+    font-size: 18px;
+    vertical-align: -4px;
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 0 17px rgb(0, 0, 0, 0.1);
+    font-size: inherit;
+    padding: 0;
+}
+
+.dropdown-item {
+    font-size: inherit;
+    padding: 8px 24px;
+}
+
+.btn {
+    border-radius: 0;
+    font-size: inherit;
+    line-height: 24px;
+    font-weight: 500;
+    color: white;
+    background-color: $mainColor;
+    border: 1px solid transparent;
+
+    &:hover {
+        border: 1px solid $mainColor;
+        background-color: transparent;
+        color: $mainColor;
+    }
+}
+
+.topbar {
+    background-color: #1e293b;
+    color: #fff;
+    padding: 8px 0;
+}
