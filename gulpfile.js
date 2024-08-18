@@ -7,11 +7,11 @@ import gutil from "gulp-util";
 import sourcemaps from "gulp-sourcemaps";
 import autoprefixer from "gulp-autoprefixer";
 import rimraf from "rimraf";
-import comments from "gulp-header-comment";
 import jshint from "gulp-jshint";
 import fileinclude from "gulp-file-include";
 import uglify from "gulp-uglify";
 import cleanCss from "gulp-clean-css";
+import concat from "gulp-concat";
 
 const scss = gulpSass(sass);
 
@@ -59,7 +59,7 @@ gulp.task("js:build", function () {
     .src(path.src.js)
     .pipe(jshint.reporter("jshint-stylish")).on("error", gutil.log)
     .pipe(uglify())
-    .pipe()
+    .pipe(concat('main.js'))
     .pipe(gulp.dest(path.build.dir + "js/"));
 });
 
