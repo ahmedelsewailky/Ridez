@@ -9,6 +9,9 @@ import autoprefixer from "gulp-autoprefixer";
 import rimraf from "rimraf";
 import comments from "gulp-header-comment";
 import jshint from "gulp-jshint";
+import fileinclude from "gulp-file-include";
+import uglify from "gulp-uglify";
+import cleanCss from "gulp-clean-css";
 
 const scss = gulpSass(sass);
 
@@ -31,14 +34,10 @@ var path = {
 gulp.task("html:build", function () {
   return gulp
     .src(path.src.html)
-    .pipe(
-      comments(`
-    TWITTER: https://twitter.com/elsewailky
-    FACEBOOK: https://www.facebook.com/ahmedelsewailky
-    GITHUB: https://github.com/ahmedelsewailky/
-    LINKEDIN: https://www.linkedin.com/in/ahmed-elsewailky-a83882144/
-    `)
-    )
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
     .pipe(gulp.dest(path.build.dir));
 });
 
@@ -47,21 +46,10 @@ gulp.task("scss:build", function () {
   return gulp
     .src(path.src.scss)
     .pipe(sourcemaps.init())
-    .pipe(
-      scss({
-        outputStyle: "expanded",
-      }).on("error", scss.logError)
-    )
+    .pipe(scss({outputStyle: "expanded"}).on("error", scss.logError))
     .pipe(autoprefixer())
+    .pipe(cleanCss())
     .pipe(sourcemaps.write("/"))
-    .pipe(
-      comments(`
-    TWITTER: https://twitter.com/elsewailky
-    FACEBOOK: https://www.facebook.com/ahmedelsewailky
-    GITHUB: https://github.com/ahmedelsewailky/
-    LINKEDIN: https://www.linkedin.com/in/ahmed-elsewailky-a83882144/
-    `)
-    )
     .pipe(gulp.dest(path.build.dir + "css/"));
 });
 
@@ -69,16 +57,9 @@ gulp.task("scss:build", function () {
 gulp.task("js:build", function () {
   return gulp
     .src(path.src.js)
-    .pipe(jshint.reporter("jshint-stylish"))
-    .on("error", gutil.log)
-    .pipe(
-      comments(`
-    TWITTER: https://twitter.com/elsewailky
-    FACEBOOK: https://www.facebook.com/ahmedelsewailky
-    GITHUB: https://github.com/ahmedelsewailky/
-    LINKEDIN: https://www.linkedin.com/in/ahmed-elsewailky-a83882144/
-  `)
-    )
+    .pipe(jshint.reporter("jshint-stylish")).on("error", gutil.log)
+    .pipe(uglify())
+    .pipe()
     .pipe(gulp.dest(path.build.dir + "js/"));
 });
 
