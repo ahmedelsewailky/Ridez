@@ -14,11 +14,13 @@ const scss = gulpSass(sass);
 
 var path = {
   src: {
-    html: "source/*.html",
-    js: "source/js/*.js",
-    scss: "source/scss/**/*.scss",
-    images: "source/images/**/*.+(png|jpg|gif|svg)",
-    libs: "source/libs/**/*.*"
+    html: "src/*.html",
+    scss: "src/scss/**/*.scss",
+    images: "src/images/**/*.+(png|jpg|gif|svg)",
+    plugins: "src/plugins/**/*.*",
+    jsFiles: [
+      "src/js/*.js",
+    ]
   },
   build: {
     dir: "dist/",

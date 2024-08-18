@@ -29,7 +29,6 @@
     "bootstrap": "^5.3.3",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
-    "gulp-file-include": "^2.3.0",
     "gulp-header-comment": "^0.10.0",
     "gulp-jshint": "^2.1.0",
     "gulp-rimraf": "^1.0.0",
@@ -39,5 +38,10 @@
     "jshint": "^2.13.6",
     "jshint-stylish": "^2.2.1",
     "sass": "^1.32.13"
+  },
+  "devDependencies": {
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-uglify": "^3.0.2"
   }
 }
