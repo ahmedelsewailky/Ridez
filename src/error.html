@@ -10,143 +10,16 @@
 
     <title>Ridez - Bootstrap 5 Template</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">
-
-    <!-- Core Css Files -->
-    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./libs/boxicons/css/boxicons.min.css">
-    <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    @@include('./partials/links.html')
 </head>
 
 <body>
-
+ 
     <div id="app">
-        <div id="preloader">
-            <div class="spinner">
-                <img src="your-icon.png" alt="Icon">
-            </div>
-        </div>
+        @@include('./partials/topbar.html')
 
 
-        <div class="topbar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="d-flex align-items-center">
-                            <i class="bx bx-map me-2"></i>
-                            <p><span class="fw-semibold">Location:</span> 852 Naser City, Cairo</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="d-flex align-items-center">
-                            <i class="bx bx-time-five me-2"></i>
-                            <p><span class="fw-semibold">Open Hours:</span> Mon. - Fri. 09:00AM - 18:00PM</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="d-flex align-items-center justify-content-end">
-                            <i class="bx bx-clock"></i>
-                            <span class="fw-semibold">Our Socials:</span>
-                            <a href="https://facebook.com/ahmedelsewailky" target="_blank" rel="noopener"
-                                title="Facebook">
-                                <i class="bx bxl-facebook"></i>
-                            </a>
-                            <a href="https://twitter.com/elsewailky" target="_blank" rel="noopener" title="Twitter">
-                                <i class="bx bxl-twitter"></i>
-                            </a>
-                            <a href="https://instagram.com/ahmedelsewailky" target="_blank" rel="noopener"
-                                title="Instagram">
-                                <i class="bx bxl-instagram"></i>
-                            </a>
-                            <a href="https://github.com/ahmedelsewailky" target="_blank" rel="noopener" title="Github">
-                                <i class="bx bxl-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a href="index.html" class="navbar-brand" title="Ridez - Bootstrap 5 Template">
-                    <img src="./images/logo.svg" alt="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#homeOneNavigationMenu" aria-controls="homeOneNavigationMenu" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end" id="homeOneNavigationMenu">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title">Offcanvas</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle active" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
-                                    Home
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="index.html">Home 1</a></li>
-                                    <li><a class="dropdown-item" href="index-2.html">Home 2</a></li>
-                                    <li><a class="dropdown-item" href="index-3.html">Home 3</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Services
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="services-1.html">Services 1</a></li>
-                                    <li><a class="dropdown-item" href="services-2.html">Services 2</a></li>
-                                    <li><a class="dropdown-item" href="services-details-1.html">Services Details 1</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="services-details-2.html">Services Details 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Pages
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="price-1.html">Price 1</a></li>
-                                    <li><a class="dropdown-item" href="price-2.html">Price 2</a></li>
-                                    <li><a class="dropdown-item" href="error.html">Error Page</a></li>
-                                    <li><a class="dropdown-item" href="faqs-1.html">Faqs 1</a></li>
-                                    <li><a class="dropdown-item" href="faqs-2.html">Faqs 2</a></li>
-                                    <li><a class="dropdown-item" href="team.html">Team</a></li>
-                                    <li><a class="dropdown-item" href="team-details.html">Team Details</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                        <div class="header-buttons">
-                            <button class="btn btn-outline-dark" id="search-icon" type="button">
-                                <i class="bx bx-search"></i>
-                            </button>
-                            <a href="contact.html" class="btn btn-dark">Make Appointment</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        @@include('./partials/navbar.html')
 
 
         <div class="page-header">
@@ -223,132 +96,11 @@
         </div>
 
 
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-body">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <h4>About Center</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias facere modi molestias
-                                soluta numquam quas iste harum quibusdam ex suscipit.
-                            </p>
-                            <span>WE ARE AVAILABLE</span>
-                            <h6>Mon-Sat: 09.00 am to 6.30 pm</h6>
-                            <a href="tel:+201080720455">Call To Us</a>
-                        </div>
-
-                        <div class="col-lg-3">
-                            <h4>Quick Link</h4>
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a href="about.html" class="nav-link">About Us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="services-1.html" class="nav-link">Popular Services</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="blog.html" class="nav-link">Blog & News</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="index.html" class="nav-link">Why Choose Us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="contact.html" class="nav-link">Contact Us</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-3">
-                            <h4>Recent Post</h4>
-                            <div class="d-flex mb-3">
-                                <div class="flex-shrink-0 me-3">
-                                    <img src="https://via.placeholder.com/80" alt="">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <a href="blog-single.html">Get Back on the Road Fast with Our 5-Star Car Services</a>
-                                    <span>
-                                        <i class="bx bx-user"></i>
-                                        By: <a href="#">A. Elsewailky</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-3">
-                                <div class="flex-shrink-0 me-3">
-                                    <img src="https://via.placeholder.com/80" alt="">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <a href="blog-single.html">Get Back on the Road Fast with Our 5-Star Car Services</a>
-                                    <span>
-                                        <i class="bx bx-user"></i>
-                                        By: <a href="#">A. Elsewailky</a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3">
-                            <h4>News Letter</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veniam nobis, ipsam
-                                laboriosam deleniti enim!</p>
-                            <form action="/">
-                                <input type="text" class="form-control" placeholder="Email Adress">
-                                <button type="button" class="btn btn-success">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="copy-right">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <p>Copyright &copy; 2024 <a href="index.html" class="text-main">Ridez</a>. All Rights Reserved.</p>
-                        </div>
-                        <div class="col-lg-6 text-end socials">
-                            <a href="https://facebook.com/ahmedelsewailky" target="_blank" rel="noopener"
-                                title="Facebook">
-                                <i class="bx bxl-facebook"></i>
-                            </a>
-                            <a href="https://twitter.com/elsewailky" target="_blank" rel="noopener" title="Twitter">
-                                <i class="bx bxl-twitter"></i>
-                            </a>
-                            <a href="https://instagram.com/ahmedelsewailky" target="_blank" rel="noopener"
-                                title="Instagram">
-                                <i class="bx bxl-instagram"></i>
-                            </a>
-                            <a href="https://github.com/ahmedelsewailky" target="_blank" rel="noopener" title="Github">
-                                <i class="bx bxl-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-
-        <div id="search-popup">
-            <div class="search-content">
-                <form action="search.html" method="get">
-                    <div class="form-group">
-                        <input type="search" class="form-control" name="q" placeholder="Type to search ...">
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">
-                        <i class="bx bx-search"></i>
-                    </button>
-                </form>
-            </div>
-            <button class="close-btn">&times;</button>
-        </div>
-
-        <button id="back-to-top" class="btn btn-primary" title="Back to Top">↑ Top</button>
+        @@include('./partials/footer.html')
     </div>
 
 
-    <!-- Core Js & Plugins -->
-    <script src="./libs/jquery/jquery-3.7.1.min.js"></script>
-    <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./libs/swiper/swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
+    @@include('./partials/scripts.html')
 </body>
 
 </html>
