@@ -3,14 +3,10 @@
 import gulp from "gulp";
 import * as sass from 'sass';
 import gulpSass from 'gulp-sass';
-import gutil from "gulp-util";
 import sourcemaps from "gulp-sourcemaps";
 import autoprefixer from "gulp-autoprefixer";
-import rimraf from "rimraf";
-import jshint from "gulp-jshint";
 import fileinclude from "gulp-file-include";
 import uglify from "gulp-uglify";
-import cleanCss from "gulp-clean-css";
 import concat from "gulp-concat";
 import imagemin from "gulp-imagemin";
 import htmlformat from "gulp-format-html";
@@ -49,10 +45,9 @@ gulp.task("scss:build", function () {
     return gulp
         .src(path.src.scss)
         .pipe(sourcemaps.init())
-        .pipe(scss({ outputStyle: "expanded" }).on("error", scss.logError))
+        .pipe(scss({ outputStyle: "compressed" }).on("error", scss.logError))
         .pipe(autoprefixer())
-        .pipe(cleanCss())
-        .pipe(sourcemaps.write("/"))
+        .pipe(sourcemaps.write("."))
         .pipe(gulp.dest(path.build.dir + "css/"));
 });
 
@@ -60,7 +55,6 @@ gulp.task("scss:build", function () {
 gulp.task("js:build", function () {
     return gulp
         .src(path.src.jsFiles)
-        .pipe(jshint.reporter("jshint-stylish")).on("error", gutil.log)
         .pipe(uglify())
         .pipe(concat('main.js'))
         .pipe(gulp.dest(path.build.dir + "js/"));
@@ -81,11 +75,6 @@ gulp.task("plugins:build", function () {
         .pipe(gulp.dest(path.build.dir + "plugins/"));
 });
 
-// Clean Build Folder
-gulp.task("clean", function (cb) {
-    rimraf("./dist", cb);
-});
-
 // Watch Task
 gulp.task("watch", function () {
     gulp.watch(path.src.html, gulp.series("html:build"));
@@ -99,7 +88,6 @@ gulp.task("watch", function () {
 gulp.task(
     "default",
     gulp.series(
-        "clean",
         "html:build",
         "js:build",
         "scss:build",
