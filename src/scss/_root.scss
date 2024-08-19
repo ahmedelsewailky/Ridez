@@ -1,13 +1,17 @@
 :root {
-    font-size: 14px;
+    --font-size: 16px;
+    --font-family: "Rubik", sans-serif;
 
     @each $color, $code in $colors {
         --bg-#{$color}: #{$code};
     }
 
-    --main-color: var(--bg-emerald);
+    --main-color: var(--bg-#{$mainColor});
 }
 
 body {
-    font-size: var(--font-size);
+    font: {
+        size: var(--font-size);
+        family: var(--font-family);
+    }
 }
