@@ -1,18 +1,21 @@
 @import 'variables';
 
 @import 'root';
-@import 'colors';
 @import 'typograph';
 
-// Utilities
+// UTILITIES
 @import 'utilities/font';
+@import 'utilities/borders';
+@import 'utilities/background';
+@import 'utilities/text';
 
 // COMPONENTS
 @import 'components/dropdown';
 @import 'components/navlink';
+@import 'components/buttons';
 @import 'components/boxicons';
 
-// Partials
+// PARTIALS
 @import 'partials/topbar';
 @import 'partials/navbar';
 @import 'partials/hero';
