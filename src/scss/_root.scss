@@ -4,6 +4,8 @@
     @each $color, $code in $colors {
         --bg-#{$color}: #{$code};
     }
+
+    --main-color: var(--bg-emerald);
 }
 
 body {
