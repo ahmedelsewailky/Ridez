@@ -1,0 +1,11 @@
+:root {
+    font-size: 14px;
+
+    @each $color, $code in $colors {
+        --bg-#{$color}: #{$code};
+    }
+}
+
+body {
+    font-size: var(--font-size);
+}

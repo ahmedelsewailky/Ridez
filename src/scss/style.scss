@@ -1,64 +1,11 @@
-$mainColor: #10B981;
-$darkColor: #1E293B;
+@import 'variables';
 
-$fontSize: 14px;
-body {
-    font-size: $fontSize;
-}
+@import 'root';
+@import 'colors';
+@import 'typograph';
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    margin-bottom: 0;
-}
+// Utilities
+@import 'utilities/font';
 
-a,
-.nav-link {
-    color: inherit;
-    font-size: inherit;
-    text-decoration: none;
-}
-
-.bx {
-    font-size: 18px;
-    vertical-align: -4px;
-}
-
-.dropdown-menu {
-    border-radius: 0;
-    border: none;
-    box-shadow: 0 0 17px rgb(0, 0, 0, 0.1);
-    font-size: inherit;
-    padding: 0;
-}
-
-.dropdown-item {
-    font-size: inherit;
-    padding: 8px 24px;
-}
-
-.btn {
-    border-radius: 0;
-    font-size: inherit;
-    line-height: 24px;
-    font-weight: 500;
-    color: white;
-    background-color: $mainColor;
-    border: 1px solid transparent;
-
-    &:hover {
-        border: 1px solid $mainColor;
-        background-color: transparent;
-        color: $mainColor;
-    }
-}
-
-.topbar {
-    background-color: $darkColor;
-    color: #fff;
-    padding: 8px 0;
-}
+// COMPONENTS
+@import 'components/dropdown';
