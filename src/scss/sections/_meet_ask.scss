@@ -1,0 +1,50 @@
+.meet-ask-row {
+    padding: 40px 0;
+    display: flex;
+    position: relative;
+    color: white;
+    margin-top: -70px;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: var(--main-color);
+        background-image: url('./../images/png/bg-1.png');
+        width: 90%;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+        left: -220px;
+    }
+
+    .email {
+        border-left: 1px solid rgb(255 255 255 / 19%);
+        margin-left: 32px;
+        padding-left: 12px;
+    }
+
+    .bx {
+        $size: 64px;
+        font-size: 40px;
+        width: $size;
+        height: $size;
+        text-align: center;
+        display: grid;
+        place-content: center;
+        opacity: 0.5;
+    }
+
+    span {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    a {
+        font-weight: 700;
+        display: block;
+        font-size: 17px;
+        text-decoration: none;
+        &:hover { color: white; }
+    }
+}
