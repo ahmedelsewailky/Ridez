@@ -1,0 +1,9 @@
+a,
+.nav-link {
+    color: inherit;
+    font-size: inherit;
+
+    &:hover {
+        color: var(--main-color);
+    }
+}
