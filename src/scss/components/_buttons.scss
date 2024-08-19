@@ -21,6 +21,7 @@
 
 .btn {
     border-radius: 0;
+    padding: 8px 16px;
 
     &-main {
         @extend .btn-#{$mainColor};
