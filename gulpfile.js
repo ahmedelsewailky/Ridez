@@ -45,7 +45,7 @@ gulp.task("scss:build", function () {
     return gulp
         .src(path.src.scss)
         .pipe(sourcemaps.init())
-        .pipe(scss({ outputStyle: "compressed" }).on("error", scss.logError))
+        .pipe(scss({ outputStyle: "expanded" }).on("error", scss.logError))
         .pipe(autoprefixer())
         .pipe(sourcemaps.write("."))
         .pipe(gulp.dest(path.build.dir + "css/"));
