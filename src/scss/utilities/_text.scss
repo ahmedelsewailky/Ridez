@@ -1,0 +1,5 @@
+@each $color, $code in $colors {
+    .text-#{$color} {
+        color: var(--bg-#{$color});
+    }
+}

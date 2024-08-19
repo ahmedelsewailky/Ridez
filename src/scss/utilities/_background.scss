@@ -1,0 +1,6 @@
+@each $color, $code in $colors {
+    .bg-#{$color} {
+        background-color: var(--bg-#{$color});
+        color: lighten($code, 45%)
+    }
+}
