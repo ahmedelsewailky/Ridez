@@ -1,0 +1,25 @@
+.hero-slide {
+    .swiper-slide {
+        height: 100vh;
+
+        background: {
+            position: center;
+            size: contain;
+            repeat: no-repeat;
+        }
+    }
+
+    .hero-slide {
+        &-one {
+            background-image: url('https://via.placeholder.com/1600x700');
+        }
+
+        &-two {
+            background-image: url('https://via.placeholder.com/1600x700');
+        }
+
+        &-three {
+            background-image: url('https://via.placeholder.com/1600x700');
+        }
+    }
+}
