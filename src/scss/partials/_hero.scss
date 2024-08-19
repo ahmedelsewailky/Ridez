@@ -1,12 +1,27 @@
 .hero-slide {
     .swiper-slide {
         height: 100vh;
+        display: flex;
+        position: relative;
 
         background: {
             position: center;
-            size: contain;
+            size: cover;
             repeat: no-repeat;
         }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(100deg, black, transparent 55%);
+            z-index: -1;
+        }
+    }
+
+    .container {
+        align-self: center;
     }
 
     .hero-slide {
@@ -22,4 +37,77 @@
             background-image: url('https://via.placeholder.com/1600x700');
         }
     }
+
+    .hero-slide-text-content {
+        width: 50%;
+        color: white;
+
+        h6 {
+            color: white;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            position: relative;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 30px;
+                height: 3px;
+                background-color: white;
+                vertical-align: middle;
+                margin-right: 12px;
+            }
+        }
+
+        h1 {
+            font-weight: 700;
+            text-transform: capitalize;
+            font-size: 50px;
+        }
+
+        p {
+            margin: 16px 0;
+            line-height: 28px;
+        }
+
+        .btn {
+            line-height: 35px;
+            width: 150px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-top: 16px;
+        }
+    }
+}
+
+.swiper-pagination-bullet {
+    width: 4px;
+    height: 20px;
+    color: transparent !important;
+    background-color: #ffffff54;
+    margin-bottom: 5px !important;
+    border-radius: 0;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    background-color: white !important;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 0;
+    top: 50%;
+    left: auto;
+    right: 60px;
+    width: auto;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
