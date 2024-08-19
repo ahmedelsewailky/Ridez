@@ -1,5 +1,27 @@
 .topbar {
-    padding: 0.5rem 0;
+    padding: 12px 0;
     background-color: var(--bg-dark);
-    color: white;
+    color: lightgrey;
+
+    span {
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #e7e7e7;
+        margin: 0 6px 0 4px;
+    }
+
+    .nav {
+        .nav-item:last-child {
+            margin-left: 1rem;
+            padding-left: 16px;
+            border-left: 1px solid rgb(255 255 255 / 50%);
+        }
+    }
+
+    .social-link {
+        display: inline-block;
+        width: 25px;
+        font-size: 16px;
+        text-align: center;
+    }
 }
