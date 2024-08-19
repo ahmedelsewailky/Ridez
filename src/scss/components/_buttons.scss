@@ -1,0 +1,32 @@
+@each $color, $code in $colors {
+    .btn-#{$color} {
+        background-color: var(--bg-#{$color});
+        color: lighten($code, 45%);
+
+        &:hover {
+            @extend .btn-outline-#{$color};
+        }
+    }
+
+    .btn-outline-#{$color} {
+        border: 1px solid var(--bg-#{$color});
+        color: var(--bg-#{$color});
+        background-color: transparent;
+
+        &:hover {
+            @extend .btn-#{$color};
+        }
+    }
+}
+
+.btn {
+    border-radius: 0;
+
+    &-main {
+        @extend .btn-#{$mainColor};
+    }
+
+    &-outline-main {
+        @extend .btn-outline-#{$mainColor};
+    }
+}
