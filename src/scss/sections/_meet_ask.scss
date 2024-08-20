@@ -1,49 +1,64 @@
 .meet-ask-row {
-    padding: 40px 0;
     display: flex;
-    position: relative;
-    color: white;
-    margin-top: -70px;
+    padding: 32px 82px 32px 0;
+    margin-top: -90px;
     z-index: 1;
+    background-color: white;
+    justify-content: end;
+    transform: translateX(-35%);
+    height: 145px;
+    align-items: center;
 
-    &::before {
-        content: "";
-        position: absolute;
-        background-color: var(--main-color);
-        width: 90%;
-        height: 100%;
-        top: 0;
-        z-index: -1;
-        left: -220px;
-    }
+    .meet-ask-item {
+        display: flex;
 
-    .email {
-        border-left: 1px solid rgb(255 255 255 / 19%);
-        margin-left: 32px;
-        padding-left: 12px;
-    }
+        .mai-image {
+            width: 42px;
+            height: 42px;
+            overflow: hidden;
+            margin-right: 24px;
 
-    .bx {
-        $size: 64px;
-        font-size: 40px;
-        width: $size;
-        height: $size;
-        text-align: center;
-        display: grid;
-        place-content: center;
-        opacity: 0.5;
-    }
+            img {
+                height: 100%;
+            }
+        }
 
-    span {
-        font-size: 12px;
-        letter-spacing: 1px;
-    }
+        .mai-text {
+            span {
+                font-size: 13px;
+                text-transform: uppercase;
+            }
 
-    a {
-        font-weight: 700;
-        display: block;
-        font-size: 17px;
-        text-decoration: none;
-        &:hover { color: white; }
+            h6 {
+                font-size: 18px;
+                font-weight: 600;
+                margin: 3px 0;
+            }
+
+            a {
+                display: inline-block;
+                font-size: 13px;
+                text-decoration: none;
+                font-weight: 500;
+                // color: var(--main-color);
+            }
+        }
+
+        &:nth-child(2) {
+            position: relative;
+            padding-left: 32px;
+            margin-left: 32px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                height: 50%;
+                left: 0;
+                width: 1px;
+                background-color: #ddd;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
     }
 }

@@ -13,12 +13,14 @@
 @import 'components/navlink';
 @import 'components/buttons';
 @import 'components/dropdown';
-@import 'components/boxicons';
 
 // PARTIALS
 @import 'partials/topbar';
 @import 'partials/navbar';
 @import 'partials/hero';
 
+@import 'global';
+
 // SECTIONS
 @import 'sections/meet_ask';
+@import 'sections/about_section';

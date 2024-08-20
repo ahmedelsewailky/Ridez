@@ -1,0 +1,99 @@
+.featured-box {
+    align-items: center;
+    margin: 24px 0 32px;
+    border: 1px solid #ddd;
+    padding: 24px;
+
+    .featured-box-image {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f1f1f1;
+            z-index: -1;
+            left: -5px;
+            top: 12px;
+        }
+
+        img {
+            $size: 42px;
+            width: $size;
+            height: $size;
+        }
+    }
+}
+
+.about-author {
+    display: flex;
+    align-items: center;
+
+    .about-author-avatar {
+        margin-right: 20px;
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.experince-box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: white;
+    padding: 24px;
+    text-align: left;
+}
+
+.experince-box span {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.section.about p {
+    padding-left: 24px;
+    border-left: 3px solid var(--main-color);
+    margin-left: 16px;
+}
+
+.section.about .btn {
+    background: linear-gradient(to top, var(--main-color), #c70e0e);
+    color: white;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 14px 32px;
+    box-shadow: -10px 10px 20px rgb(244 67 54 / 50%);
+    border: none;
+}
+
+.section.about .btn {
+    background: linear-gradient(to top, var(--main-color), #c70e0e);
+    color: white;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 14px 32px;
+    box-shadow: -10px 10px 20px rgb(244 67 54 / 50%);
+    border: none;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.section.about .btn:hover {
+    transform: translateY(-10px);
+}
+
+.section.about .btn::before {content: '';position: absolute;width: 10px;height: 100%;background-color: rgb(255 255 255 / 35%);top: 0;left: -12px;transform: skew(-20deg, 10deg);transition: 0.3s cubic-bezier(0.86,0,0.07,1);}
+
+.section.about .btn:hover::before {
+    /* right: -20px; */
+    left: auto;
+}

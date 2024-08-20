@@ -4,7 +4,9 @@
         color: lighten($code, 45%);
 
         &:hover {
-            @extend .btn-outline-#{$color};
+            border: 1px solid var(--bg-#{$color});
+            color: var(--bg-#{$color});
+            background-color: transparent;
         }
     }
 
@@ -14,7 +16,8 @@
         background-color: transparent;
 
         &:hover {
-            @extend .btn-#{$color};
+            background-color: var(--bg-#{$color});
+            color: lighten($code, 45%);
         }
     }
 }
