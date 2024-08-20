@@ -8,7 +8,6 @@ import autoprefixer from "gulp-autoprefixer";
 import fileinclude from "gulp-file-include";
 import uglify from "gulp-uglify";
 import concat from "gulp-concat";
-import imagemin from "gulp-imagemin";
 import htmlformat from "gulp-format-html";
 import browserSync from "browser-sync";
 
@@ -20,7 +19,7 @@ var path = {
     src: {
         html: "src/*.html",
         scss: "src/scss/**/*.scss",
-        images: "src/images/**/*.+(png|jpg|gif|svg)",
+        images: "src/images/**/*.{png,jpg,jpeg,gif,svg}",
         plugins: "src/plugins/**/*.*",
         jsFiles: [
             "src/js/*.js",
@@ -67,15 +66,10 @@ gulp.task("js:build", function () {
 });
 
 // Images
-gulp.task("images", function () {
-    return gulp
-        .src(path.src.images, { encoding: false })
-        .pipe(imagemin({
-            optimizationLevel: 5,
-            progressive: true,
-            interlaced: true
-        }))
-        .pipe(gulp.dest(path.build.dir + "images/"));
+gulp.task("images:build", function () {
+    return gulp.src(path.src.images, { encoding: false })
+        .pipe(gulp.dest(path.build.dir + "images/"))
+        .pipe(server.stream());
 });
 
 // Plugins
@@ -97,13 +91,14 @@ gulp.task('serve', () => {
     gulp.watch(path.src.html, gulp.series("html:build"));
     gulp.watch(path.src.scss, gulp.series("scss:build"));
     gulp.watch(path.src.jsFiles, gulp.series("js:build"));
+    gulp.watch(path.src.images, gulp.series("images:build"));
     gulp.watch(path.src.plugins, gulp.series("plugins:build"));
 });
 
 // Define default task
 gulp.task('default',
     gulp.series(
-        gulp.parallel('html:build', 'scss:build', 'js:build', 'plugins:build'),
+        gulp.parallel('html:build', 'scss:build', 'js:build', 'images:build', 'plugins:build'),
         'serve'
     ));
 
