@@ -67,12 +67,15 @@ gulp.task("js:build", function () {
 });
 
 // Images
-gulp.task("images:build", function () {
+gulp.task("images", function () {
     return gulp
-        .src(path.src.images)
-        .pipe(imagemin())
-        .pipe(gulp.dest(path.build.dir + "images/"))
-        .pipe(server.stream());
+        .src(path.src.images, { encoding: false })
+        .pipe(imagemin({
+            optimizationLevel: 5,
+            progressive: true,
+            interlaced: true
+        }))
+        .pipe(gulp.dest(path.build.dir + "images/"));
 });
 
 // Plugins
@@ -94,14 +97,13 @@ gulp.task('serve', () => {
     gulp.watch(path.src.html, gulp.series("html:build"));
     gulp.watch(path.src.scss, gulp.series("scss:build"));
     gulp.watch(path.src.jsFiles, gulp.series("js:build"));
-    gulp.watch(path.src.images, gulp.series("images:build"));
     gulp.watch(path.src.plugins, gulp.series("plugins:build"));
 });
 
 // Define default task
 gulp.task('default',
     gulp.series(
-        gulp.parallel('html:build', 'scss:build', 'js:build', 'images:build', 'plugins:build'),
+        gulp.parallel('html:build', 'scss:build', 'js:build', 'plugins:build'),
         'serve'
     ));
 
