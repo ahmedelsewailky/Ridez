@@ -1,3 +1,14 @@
+@media (min-width: 1400px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1200px;
+    }
+}
+
 .bx {
     vertical-align: -1px;
 
@@ -7,44 +18,46 @@
 }
 
 .section {
-    padding: 48px 0;
+    padding: 48px 0 64px 0;
 
-    .section-subtitle {
-        font-size: 13px;
-        text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: 1px;
-        position: relative;
-        padding-left: 40px;
-
-        $pseudo_width: 30px;
-
-        &::after,
-        &::before {
-            content: '';
-            position: absolute;
-            width: $pseudo_width;
-            height: 2px;
-            left: 0;
-            background-color: red;
-            bottom: 10px;
+    .section-header {
+        .subtitle {
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            position: relative;
+            padding-left: 40px;
+    
+            $pseudo_width: 30px;
+    
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                width: $pseudo_width;
+                height: 2px;
+                left: 0;
+                background-color: red;
+                bottom: 10px;
+            }
+    
+            &:before {
+                bottom: 5px;
+                width: ($pseudo_width - 11px);
+                left: 11px
+            }
         }
-
-        &:before {
-            bottom: 5px;
-            width: ($pseudo_width - 11px);
-            left: 11px
+    
+        .title {
+            font-size: 40px;
+            text-transform: capitalize;
+            margin: 16px 0;
+            font-weight: 600;
         }
-    }
-
-    h2.section-title {
-        font-size: 40px;
-        text-transform: capitalize;
-        margin: 16px 0;
-        font-weight: 600;
-    }
-
-    p {
-        line-height: 25px;
+    
+        p {
+            line-height: 25px;
+        }
     }
 }

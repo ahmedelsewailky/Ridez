@@ -1,36 +1,63 @@
-@each $color, $code in $colors {
-    .btn-#{$color} {
-        background-color: var(--bg-#{$color});
-        color: lighten($code, 45%);
+.button {
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px 24px;
+    position: relative;
+    transition: 0.3s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+    border: 1px solid var(--main-color);
+    line-height: normal;
 
-        &:hover {
-            border: 1px solid var(--bg-#{$color});
-            color: var(--bg-#{$color});
-            background-color: transparent;
-        }
+    &::after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 100%;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        transition: 0.3s cubic-bezier(0.79, 0.14, 0.15, 0.86);
     }
 
-    .btn-outline-#{$color} {
-        border: 1px solid var(--bg-#{$color});
-        color: var(--bg-#{$color});
+    &-outline {
+        color: var(--bg-dark);
         background-color: transparent;
 
+        &::after {
+            background-color: var(--main-color);
+        }
+
         &:hover {
-            background-color: var(--bg-#{$color});
-            color: lighten($code, 45%);
+            color: white;
+
+            &::after {
+                width: 100%;
+                left: 0;
+                right: auto;
+            }
         }
     }
-}
-
-.btn {
-    border-radius: 0;
-    padding: 8px 16px;
 
     &-main {
-        @extend .btn-#{$mainColor};
-    }
+        color: white !important;
 
-    &-outline-main {
-        @extend .btn-outline-#{$mainColor};
+        &::after {
+            width: 100%;
+            left: 0;
+            right: auto;
+            background-color: var(--main-color);
+            z-index: -1;
+        }
+
+        &:hover {
+            color: #000 !important;
+            &::after {
+                width: 0;
+                right: 0;
+                left: auto;
+            }
+        }
+
     }
 }
