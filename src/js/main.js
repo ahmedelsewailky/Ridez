@@ -87,9 +87,23 @@ $(function () {
             }
         });
     }
-    $('.counter').each(function() {
-        var $this = $(this);
-        var endValue = parseInt($this.data('ridez-number'));
-        animateCounter($this, 0, endValue, 2000); 
+
+    function isScrolledIntoView(elem) {
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
+        var elemTop = $(elem).offset().top;
+        var elemBottom = elemTop + $(elem).height();
+        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    }
+
+    var counterStarted = false;
+
+    $(window).on('scroll', function() {
+        if (!counterStarted && isScrolledIntoView('.counter')) {
+            var $counter = $('.counter');
+            var endValue = parseInt($counter.data('ridez-number'));
+            animateCounter($counter, 0, endValue, 2000, 'swing');
+            counterStarted = true; // Ensure it only starts once
+        }
     });
 });
