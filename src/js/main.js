@@ -68,4 +68,28 @@ $(function () {
         $('.search-keyword').text(keyword);
         $('#search-input').val(keyword);
     }
+
+
+
+    /**
+     * ==================================================================================
+     * [5] - Counter Up
+     */
+    function animateCounter(element, start, end, duration) {
+        $({ count: start }).animate({ count: end }, {
+            duration: duration,
+            easing: 'swing',
+            step: function () {
+                $(element).text(Math.floor(this.count));
+            },
+            complete: function () {
+                $(element).text(this.count);
+            }
+        });
+    }
+    $('.counter').each(function() {
+        var $this = $(this);
+        var endValue = parseInt($this.data('ridez-number'));
+        animateCounter($this, 0, endValue, 2000); 
+    });
 });
