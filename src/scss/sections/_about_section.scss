@@ -45,11 +45,12 @@
 
 .experince-box {
     position: absolute;
-    right: 0;
+    right: 260px;
     bottom: 0;
     background: white;
     padding: 24px;
     text-align: left;
+    z-index: 12;
 }
 
 .experince-box span {
@@ -91,9 +92,70 @@
     transform: translateY(-10px);
 }
 
-.section.about .btn::before {content: '';position: absolute;width: 10px;height: 100%;background-color: rgb(255 255 255 / 35%);top: 0;left: -12px;transform: skew(-20deg, 10deg);transition: 0.3s cubic-bezier(0.86,0,0.07,1);}
+.section.about .btn::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    background-color: rgb(255 255 255 / 35%);
+    top: 0;
+    left: 0;    
+    transform: translateX(-50px);
+    transition: 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+}
 
 .section.about .btn:hover::before {
-    /* right: -20px; */
-    left: auto;
+    transform: translateX(160px) skew(-20deg, 10deg);
+}
+
+.section .right-banner-about {
+    position: relative;
+    text-align: right;
+}
+
+.section .right-banner-about::before {
+    width: 400px;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background: var(--main-color);
+    border-radius: 60px 0 0 0;
+    right: 0;
+}
+
+.section .right-banner-about::after {
+    --size: 400px;
+    width: var(--size);
+    height: 100%;
+    content: '';
+    position: absolute;
+    background-image: url("./../images/png/overlay-shape.png");
+    right: -51px;
+    background-size: cover;
+}
+
+.section .section-ad-images img {
+    z-index: 9;
+    position: relative;
+}
+
+.section .section-ad-images img {
+    border-radius: 0%;
+    border: 18px solid white;
+    position: absolute;
+    right: 100px;
+    top: 30px;
+    object-fit: cover;
+}
+
+.section .section-ad-images p {
+    position: absolute;
+    border: none;
+    transform: rotate(270deg);
+    bottom: 195px;
+    right: -165px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
