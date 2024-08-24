@@ -25,10 +25,10 @@ var heroSlider = new Swiper(".hero-swiper", {
  */
 var serviceSlide = new Swiper(".services-swiper", {
     loop: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    // },
     breakpoints: {
         640: {
             slidesPerView: 1,

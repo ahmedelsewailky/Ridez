@@ -1,0 +1,47 @@
+.service-card {
+    position: relative;
+
+    .service-image {
+        img {
+            width: 100%;
+        }
+    }
+
+    .service-text {
+        background-color: var(--main-color);
+        color: white;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        .st-icon {
+            background-color: white;
+            padding: 0.25rem;
+        }
+
+        .st-text {
+            padding: 1rem;
+
+            span {
+                font-size: 13px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 1rem;
+                margin-top: 5px;
+            }
+
+            h6 a {
+                font-weight: 600;
+                text-decoration: none;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.services .swiper-slide {
+    width: 290px !important;
+}
