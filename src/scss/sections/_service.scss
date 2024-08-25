@@ -10,18 +10,29 @@
     .service-text {
         background-color: var(--main-color);
         color: white;
-        display: flex;
         position: absolute;
         bottom: 0;
         width: 100%;
+        padding-left: 4rem;
 
         .st-icon {
             background-color: white;
             padding: 0.25rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 64px;
+            height: 64px;
+            display: grid;
+            place-content: center;
+
+            img {
+                width: 42px;
+            }
         }
 
         .st-text {
-            padding: 1rem;
+            padding: 0.25rem 1rem 0.5rem;
 
             span {
                 font-size: 13px;
