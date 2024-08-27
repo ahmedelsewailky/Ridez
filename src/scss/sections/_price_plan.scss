@@ -1,0 +1,72 @@
+.price-card {
+    .card-header {
+        border-radius: 0;
+        background: var(--bg-dark) url(./../../images/png/overlay/overlay-shape.png);
+        color: white;
+        padding: 32px;
+        position: relative;
+        height: 170px;
+        background-position: right;
+        background-repeat: no-repeat;
+
+        .name {
+            font-size: 28px;
+        }
+
+        .target {
+            font-size: 15px;
+        }
+
+        .price {
+            position: absolute;
+            padding: 12px 16px;
+            background-color: var(--main-color);
+            color: white;
+            bottom: -5px;
+            left: 0;
+            font-weight: 600;
+            font-size: 18px;
+
+            small {
+                font-size: 13px;
+                font-weight: 400;
+            }
+
+            &::before,
+            &::after {
+                position: absolute;
+                content: '';
+            }
+
+            &::before {
+                width: 15px;
+                height: 100%;
+                background-color: var(--main-color);
+                left: -15px;
+                top: 0;
+            }
+
+            &::after {
+                border: 15px solid;
+                border-color: transparent #cb3333 transparent transparent;
+                left: -30px;
+                bottom: -16px;
+                z-index: -1;
+            }
+        }
+    }
+
+
+    .list-group-item {
+        padding: 16px 20px;
+        border-bottom: 1px dashed #eee;
+        display: flex;
+        align-items: center;
+
+        i {
+            margin-right: 8px;
+            font-size: 18px;
+            color: var(--main-color);
+        }
+    }
+}
