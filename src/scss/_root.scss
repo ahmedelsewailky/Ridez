@@ -7,6 +7,7 @@
     }
 
     --main-color: var(--bg-#{$mainColor});
+    --dark-color: var(--bg-dark);
 }
 
 body {
