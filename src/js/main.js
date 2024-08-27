@@ -95,15 +95,39 @@ $(function () {
         var elemBottom = elemTop + $(elem).height();
         return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
     }
-
     var counterStarted = false;
-
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         if (!counterStarted && isScrolledIntoView('.counter')) {
             var $counter = $('.counter');
             var endValue = parseInt($counter.data('ridez-number'));
             animateCounter($counter, 0, endValue, 2000, 'swing');
             counterStarted = true; // Ensure it only starts once
         }
+    });
+
+
+
+    /**
+     * ==================================================================================
+     * [6] - Tab Bane Preloader Effect
+     */
+    $('.nav-pills .nav-link').on('click', function (event) {
+        event.preventDefault(); // Prevent the tab from switching immediately
+
+        var targetTab = $(this).attr('data-bs-target'); // Get the target tab's content ID
+
+        $('.nav-tab-preloader').fadeIn('fast', function () {
+            // After the preloader is shown, switch the tab content
+            $('.nav-pills .nav-link').removeClass('active');
+            $(event.target).addClass('active');
+
+            $('.tab-content .tab-pane').removeClass('show active');
+            $(targetTab).addClass('show active');
+
+            // Hide the preloader after a short delay
+            setTimeout(function () {
+                $('.nav-tab-preloader').fadeOut('fast');
+            }, 500); // Adjust timing as needed
+        });
     });
 });
