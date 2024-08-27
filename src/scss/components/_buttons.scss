@@ -8,6 +8,8 @@
     transition: 0.3s cubic-bezier(0.79, 0.14, 0.15, 0.86);
     border: 1px solid var(--main-color);
     line-height: normal;
+    z-index: 1;
+    display: inline-block;
 
     &::after {
         position: absolute;
@@ -52,6 +54,7 @@
 
         &:hover {
             color: #000 !important;
+
             &::after {
                 width: 0;
                 right: 0;
