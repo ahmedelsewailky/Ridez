@@ -1,0 +1,64 @@
+.expert-card .socials a {
+    display: grid;
+    width: 45px;
+    height: 45px;
+    background-color: var(--main-color);
+    place-content: center;
+    text-decoration: none;
+    color: white;
+}
+
+.socials {
+    flex-shrink: 0;
+}
+
+.name-job {
+    flex-grow: 1;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.expert-card {
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.expert-card img {
+    width: 100%;
+}
+
+.name-job::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    height: 70px;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.expert-card .socials a:nth-child(2) {
+    border-top: 1px solid #e34747;
+    border-bottom: 1px solid #e34747;
+}
+
+.name-job h6 a {
+    font-weight: 500;
+}
+
+.name-job span {
+    font-size: 13px;
+    display: block;
+    margin-top: 4px;
+}
