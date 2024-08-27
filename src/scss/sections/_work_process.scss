@@ -1,0 +1,82 @@
+.work-process {
+    .nav-pills {
+        .nav-link {
+            border-radius: 0;
+            width: 100%;
+            padding: 24px 16px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+
+            &.active,
+            &.active:hover {
+                color: white;
+                background-color: var(--main-color);
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 101%;
+                left: 0;
+                top: 0;
+                border: 1px solid #eee;
+                z-index: -1;
+            }
+
+            &:hover {
+                color: var(--main-color);
+            }
+
+            i {
+                font-size: 21px;
+            }
+        }
+    }
+
+    .tab-pane {
+        position: relative;
+
+        p {
+            line-height: 24px;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            list-style: none;
+
+            li {
+                padding: 6px 0;
+
+                i {
+                    margin-right: 8px;
+                    color: var(--main-color);
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .ri-feat-journey {
+        margin-top: 24px;
+
+        .ri-feat-title {
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 1px;
+            padding: 12px 0;
+        }
+
+        .ri-feat-year {
+            font-size: 57px;
+            font-weight: 500;
+            line-height: 52px;
+            color: var(--main-color);
+        }
+    }
+
+}
