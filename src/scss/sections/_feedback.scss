@@ -1,0 +1,54 @@
+.client-feedback-card p {
+    padding: 32px;
+    border: 1px solid #eee;
+    line-height: 27px;
+    background-color: #f4f4f4;
+    position: relative;
+    z-index: -1;
+}
+
+.client-media {
+    display: flex;
+    align-items: end;
+    margin-top: -24px;
+    margin-left: 32px;
+}
+
+.client-media .image {
+    border: 1px solid #eee;
+    padding: 4px;
+    margin-right: 16px;
+    background-color: white;
+}
+
+.client-media .text {
+    flex-grow: 1;
+}
+
+.client-media .text h5 {
+    font-size: 18px;
+}
+
+.client-media .text span {
+    font-size: 13px;
+}
+
+.client-feedback-card >span {
+    font-size: 64px;
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    color: var(--main-color);
+}
+
+.client-feedback-card p::after {
+    position: absolute;
+    content: '';
+    width: 250px;
+    height: 250px;
+    background-color: #ffffff87;
+    border-radius: 100%;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
