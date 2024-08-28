@@ -130,7 +130,7 @@ var clientFeedBackSwiper = new Swiper(".blog-swiper", {
             spaceBetween: 30,
         },
         1024: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 30,
         },
     },
