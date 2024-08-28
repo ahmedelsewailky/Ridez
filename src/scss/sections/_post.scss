@@ -1,0 +1,106 @@
+.post-card-item {
+    position: relative;
+    overflow: hidden;
+
+    a {
+        transition: 0.3s linear;
+    }
+
+    .post-image {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        &:hover img {
+            transform: scale(1.1);
+        }
+
+
+        .meta-category {
+            position: absolute;
+            right: 16px;
+            background-color: var(--main-color);
+            color: white;
+            font-size: 14px;
+            width: 70px;
+            height: 60px;
+            text-align: center;
+            display: grid;
+            place-content: center;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 22px;
+            bottom: 16px;
+
+            span {
+                display: block;
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: 400;
+                line-height: 13px;
+            }
+        }
+
+    }
+
+    .post-content {
+        .meta-tags {
+            display: flex;
+            margin: 16px 0;
+            font-size: 14px;
+
+            .meta {
+                i {
+                    color: var(--main-color);
+                    margin-right: 6px;
+                }
+
+                span {
+                    font-weight: 500;
+                    margin-right: 4px;
+                }
+            }
+
+            .meta-author {
+                border-right: 1px solid #e1e1e1;
+                padding-right: 12px;
+                margin-right: 12px;
+            }
+        }
+
+        h6.post-title {
+            font-size: 18px;
+            line-height: 27px;
+        }
+
+        a.read-more {
+            display: block;
+            border-top: 1px solid #eee;
+            padding: 12px 0;
+            margin-top: 16px;
+            text-transform: uppercase;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 1px;
+                background-color: black;
+                left: 0;
+                bottom: 10px;
+                transition: 0.3s ease;
+            }
+            &:hover::after {
+                width: 60px;
+            }
+
+        }
+    }
+}
