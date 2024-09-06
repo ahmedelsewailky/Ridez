@@ -10,16 +10,16 @@
 
     <title>Ridez - Bootstrap 5 Template</title>
 
-    @@include('./partials/links.html')
+    @@include('./html/partials/links.html', {"title": "Ridez - Bootstrap 5 Template"})
 </head>
 
 <body>
  
     <div id="app">
-        @@include('./partials/topbar.html')
+        @@include('./html/components/topbar.html')
 
 
-        @@include('./partials/navbar.html')
+        @@include('./html/components/navbar.html')
 
         <div class="page-header">
             <div class="container">
@@ -156,11 +156,11 @@
             </div>
         </div>
 
-        @@include('./partials/footer.html')
+        @@include('./html/components/footer.html')
     </div>
 
 
-    @@include('./partials/scripts.html')
+    @@include('./html/partials/scripts.html')
 </body>
 
 </html>

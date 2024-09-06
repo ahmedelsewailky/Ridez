@@ -4,24 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Ahmed Elsewailky">
-    <meta name="keywords" content="bootstrap,html,css,javascript,jquery,template">
-    <meta name="description" content="Bootstrap 5 template for car services agency">
 
-    <title>Ridez - Bootstrap 5 Template</title>
-
-    @@include('./partials/links.html')
+    @@include('./html/partials/links.html', {"title": "Ridez - Bootstrap 5 Template"})
 </head>
 
 <body>
 
     <div id="app">
         <!-- Topbar -->
-        @@include('./partials/topbar.html')
+        @@include('./html/components/topbar.html')
 
 
         <!-- Navbar -->
-        @@include('./partials/navbar.html')
+        @@include('./html/components/navbar.html')
 
 
         <!-- Hero Slider -->
@@ -1107,11 +1102,11 @@
             </div>
         </div>
 
-        @@include('./partials/footer.html')
+        @@include('./html/components/footer.html')
 
     </div>
 
-    @@include('./partials/scripts.html')
+    @@include('./html/partials/scripts.html')
 </body>
 
 </html>
