@@ -89,6 +89,7 @@ gulp.task('serve', () => {
         }
     });
     gulp.watch(path.src.html, gulp.series("html:build"));
+    gulp.watch("./src/html/**/*.html", gulp.series("html:build"));
     gulp.watch(path.src.scss, gulp.series("scss:build"));
     gulp.watch(path.src.jsFiles, gulp.series("js:build"));
     gulp.watch(path.src.images, gulp.series("images:build"));
