@@ -1,0 +1,21 @@
+.opa-col-item .opa-item {
+    font-size: 16px;
+    padding: 2rem;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.opa-col-item:nth-child(2) .opa-item {
+    background-color: #cb3737;
+}
+
+.opa-col-item .opa-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.opa-col-item .opa-item span {
+    font-size: 14px;
+    display: block;
+    opacity: 0.9;
+}

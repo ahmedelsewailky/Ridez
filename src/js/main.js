@@ -8,9 +8,9 @@ $(function () {
      */
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
-            $('#back-to-top').fadeIn();
+            $('#back-to-top').addClass("show");
         } else {
-            $('#back-to-top').fadeOut();
+            $('#back-to-top').removeClass("show");
         }
     });
     $('#back-to-top').click(function () {
@@ -95,15 +95,25 @@ $(function () {
         var elemBottom = elemTop + $(elem).height();
         return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
     }
-    var counterStarted = false;
+
+    // لتتبع العدادات التي بدأت
+    var countersStarted = [];
+
     $(window).on('scroll', function () {
-        if (!counterStarted && isScrolledIntoView('.counter')) {
-            var $counter = $('.counter');
-            var endValue = parseInt($counter.data('ridez-number'));
-            animateCounter($counter, 0, endValue, 2000, 'swing');
-            counterStarted = true; // Ensure it only starts once
-        }
+        $('.counter').each(function () {
+            var $counter = $(this);
+
+            // التحقق إذا كان العداد قد بدأ بالفعل
+            if (!countersStarted.includes($counter[0]) && isScrolledIntoView($counter)) {
+                var endValue = parseInt($counter.data('ridez-number'));
+                animateCounter($counter, 0, endValue, 2000, 'swing');
+
+                // إضافة العداد إلى القائمة حتى لا يتكرر
+                countersStarted.push($counter[0]);
+            }
+        });
     });
+
 
 
 

@@ -15,12 +15,13 @@
 @import 'components/dropdown';
 @import 'components/preloaders';
 @import 'components/bg_animate';
-@import 'components/footer'; 
+@import 'components/back_top';
 
 // PARTIALS
 @import 'partials/topbar';
 @import 'partials/navbar';  
 @import 'partials/hero';
+@import 'partials/footer'; 
 
 @import 'global';
 
@@ -33,3 +34,4 @@
 @import 'sections/price_plan';
 @import 'sections/feedback';
 @import 'sections/post';
+@import 'sections/open_phone';
