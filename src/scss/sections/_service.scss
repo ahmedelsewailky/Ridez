@@ -1,9 +1,14 @@
 .service-card {
     position: relative;
+    overflow: hidden;
 
     .service-image {
         img {
             width: 100%;
+            transition: 0.3s ease;
+        }
+        &:hover img {
+            transform: scale(1.25);
         }
     }
 
@@ -48,6 +53,10 @@
                 font-weight: 600;
                 text-decoration: none;
                 font-size: 18px;
+                &:hover {
+                    color: white;
+                    text-decoration: underline;
+                }
             }
         }
     }
