@@ -37,20 +37,23 @@ $(function () {
      * ==================================================================================
      * [3] - Pop-Up Search From Navbar Button
      */
-    $('#search-icon').click(function () {
-        $('#search-popup').fadeIn(300, function () {
+    $$('#search-icon').click(function () {
+        $('#search-popup').slideDown(300, function () {
             $(this).addClass('show');
         });
         $('body').css('overflow', 'hidden');
     });
-    $('.close-btn').click(function () {
-        $('#search-popup').removeClass('show').fadeOut(300, function () {
+
+    $('.close-btn').click(function (e) {
+        e.stopPropagation(); // Prevent the click from bubbling up to the parent element
+        $('#search-popup').removeClass('show').slideUp(300, function () {
             $('body').css('overflow', '');
         });
     });
-    $('#search-popup').click(function (e) {
-        if ($(e.target).closest('.search-content').length === 0) {
-            $(this).removeClass('show').fadeOut(300, function () {
+
+    $(document).click(function (e) {
+        if (!$(e.target).closest('#search-popup').length) {
+            $('#search-popup').removeClass('show').slideUp(300, function () {
                 $('body').css('overflow', '');
             });
         }
