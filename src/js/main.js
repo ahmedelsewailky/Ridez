@@ -37,28 +37,19 @@ $(function () {
      * ==================================================================================
      * [3] - Pop-Up Search From Navbar Button
      */
-    $$('#search-icon').click(function () {
-        $('#search-popup').slideDown(300, function () {
-            $(this).addClass('show');
-        });
-        $('body').css('overflow', 'hidden');
+    const searchToggler = $("#searchToggler");
+    const searchForm = $(".search-form");
+    const searchFormCloseBtn = $(".search-form .close-btn");
+
+    searchToggler.on("click", () => {
+        searchForm.animate({ right: '0' });
+        searchForm.find("form").animate({ width: '75%' });
     });
 
-    $('.close-btn').click(function (e) {
-        e.stopPropagation(); // Prevent the click from bubbling up to the parent element
-        $('#search-popup').removeClass('show').slideUp(300, function () {
-            $('body').css('overflow', '');
-        });
+    searchFormCloseBtn.on("click", () => {
+        searchForm.find("form").animate({ width: '0' });
+        searchForm.animate({ right: '-100%' });
     });
-
-    $(document).click(function (e) {
-        if (!$(e.target).closest('#search-popup').length) {
-            $('#search-popup').removeClass('show').slideUp(300, function () {
-                $('body').css('overflow', '');
-            });
-        }
-    });
-
 
 
     /**
