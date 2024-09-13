@@ -8,12 +8,12 @@ $(function () {
      */
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
-            $('#back-to-top').addClass("show");
+            $('#backToTop').addClass("show");
         } else {
-            $('#back-to-top').removeClass("show");
+            $('#backToTop').removeClass("show");
         }
     });
-    $('#back-to-top').click(function () {
+    $('#backToTop').click(function () {
         $('html, body').animate({ scrollTop: 0 }, 800);
         return false;
     });
