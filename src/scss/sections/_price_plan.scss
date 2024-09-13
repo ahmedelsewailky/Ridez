@@ -44,6 +44,10 @@
                 background-color: var(--main-color);
                 left: -15px;
                 top: 0;
+
+                @media (max-width: 992px) {
+                    & { width: 10px; left: -9px; }
+                }
             }
 
             &::after {
@@ -52,6 +56,10 @@
                 left: -30px;
                 bottom: -16px;
                 z-index: -1;
+
+                @media (max-width: 992px) {
+                    & { left: -24px; }
+                }
             }
         }
     }

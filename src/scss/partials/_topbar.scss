@@ -4,6 +4,10 @@
     color: lightgrey;
     font-size: 14px;
 
+    @media (max-width: 991px) {
+        display: none;
+    }
+
     span {
         font-weight: 600;
         text-transform: uppercase;
@@ -12,10 +16,12 @@
     }
 
     .nav {
-        .nav-item:last-child {
-            margin-left: 1rem;
-            padding-left: 16px;
-            border-left: 1px solid rgb(255 255 255 / 50%);
+        @media (min-width: 991px) {
+            .nav-item:last-child {
+                margin-left: 1rem;
+                padding-left: 16px;
+                border-left: 1px solid rgb(255 255 255 / 50%);
+            }
         }
     }
 

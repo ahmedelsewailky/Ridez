@@ -49,6 +49,13 @@
             grid-template-columns: repeat(2, 1fr);
             list-style: none;
 
+            @media (max-wdith: 992px) {
+                & {
+                    padding: 0 24px;
+                    display: block;
+                }
+            }
+
             li {
                 padding: 6px 0;
 

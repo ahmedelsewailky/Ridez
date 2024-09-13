@@ -42,6 +42,10 @@
         width: 50%;
         color: white;
 
+        @media (max-width: 992px) {
+            & { width: 100%; }
+        }
+
         h6 {
             $color: var(--main-color);
             color: $color;
@@ -116,4 +120,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media (max-width: 992px) {
+        & { right: 16px; }
+    }
 }

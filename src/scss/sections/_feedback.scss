@@ -7,6 +7,22 @@
     z-index: -1;
 }
 
+@media (max-width: 992px) {
+    .swiper-slide.client-feedback-card::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        background-color: #f4f4f4;
+        bottom: 22px;
+    }
+
+    .client-media {
+        z-index: 1;
+        position: relative;
+    }
+}
+
 .client-media {
     display: flex;
     align-items: end;
@@ -33,12 +49,14 @@
     font-size: 13px;
 }
 
-.client-feedback-card >span {
+.client-feedback-card>span {
     font-size: 64px;
     position: absolute;
     bottom: 0px;
     right: 20px;
     color: var(--main-color);
+
+    @media (max-width: 992px) { & { display: none; } }
 }
 
 .client-feedback-card p::after {

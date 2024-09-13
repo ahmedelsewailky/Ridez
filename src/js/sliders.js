@@ -83,10 +83,10 @@ var serviceSlide = new Swiper(".brand-swiper", {
  */
 var clientFeedBackSwiper = new Swiper(".client-fb-swiper", {
     loop: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    // },
     pagination: {
         el: ".client-fb-swiper .swiper-pagination",
         dynamicBullets: true,
@@ -110,11 +110,11 @@ var clientFeedBackSwiper = new Swiper(".client-fb-swiper", {
 
 
 /**
- * Client Feedback "Testimonails" Section Swiper
+ * Blog Section Swiper
  * 
  * @page index.html
  */
-var clientFeedBackSwiper = new Swiper(".blog-swiper", {
+var blogSwiper = new Swiper(".blog-swiper", {
     loop: true,
     autoplay: {
         delay: 2500,
@@ -131,6 +131,35 @@ var clientFeedBackSwiper = new Swiper(".blog-swiper", {
         },
         1024: {
             slidesPerView: 3,
+            spaceBetween: 30,
+        },
+    },
+});
+
+
+
+/**
+ * Experts slide
+ * 
+ * @page index.html
+ */
+var expertsSwiper = new Swiper(".experts-swiper", {
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        1024: {
+            slidesPerView: 4,
             spaceBetween: 30,
         },
     },

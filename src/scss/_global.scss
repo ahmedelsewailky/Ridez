@@ -20,6 +20,12 @@
 .section {
     padding: 48px 0 64px 0;
 
+    @media (max-width: 992px) {
+        & {
+            padding: 48px 0 0;
+        }
+    }
+
     .section-header {
         .subtitle {
             font-size: 13px;

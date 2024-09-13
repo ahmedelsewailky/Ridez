@@ -120,3 +120,32 @@
         }
     }
 }
+
+@media (max-width: 992px) {
+    .about .featured-box {
+        margin: 18px 0 0;
+    }
+
+    .about .right-banner .ad-images img {
+        right: 0;
+        top: 20px;
+        width: 85%;
+        height: 220px;
+    }
+
+    .about .right-banner p {
+        display: none;
+    }
+
+    .about .right-banner::after,
+    .about .right-banner::before {
+        right: 0;
+    }
+
+    .about .right-banner .experince-box {
+        right: 0;
+    }
+
+
+
+}
