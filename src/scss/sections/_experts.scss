@@ -1,6 +1,11 @@
 .expert-card {
     position: relative;
     overflow: hidden;
+    border: 1px solid #000000;
+
+    &:hover {
+        border-color: var(--main-color);
+    }
 
     .image {
         img {

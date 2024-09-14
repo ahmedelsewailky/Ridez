@@ -25,10 +25,14 @@ var heroSlider = new Swiper(".hero-swiper", {
  */
 var serviceSlide = new Swiper(".services-swiper", {
     loop: true,
-    // autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".services .swiper-button-next",
+        prevEl: ".services .swiper-button-prev",
+    },
     breakpoints: {
         640: {
             slidesPerView: 1,
@@ -83,10 +87,10 @@ var serviceSlide = new Swiper(".brand-swiper", {
  */
 var clientFeedBackSwiper = new Swiper(".client-fb-swiper", {
     loop: true,
-    // autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: ".client-fb-swiper .swiper-pagination",
         dynamicBullets: true,

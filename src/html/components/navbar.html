@@ -3,15 +3,19 @@
         <a href="index.html" class="navbar-brand" title="Ridez - Bootstrap 5 Template">
             <img src="./images/logo.svg" alt="Logo">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#homeOneNavigationMenu" aria-controls="homeOneNavigationMenu" aria-expanded="false"
-            aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#homeOneNavigationMenu"
+            aria-controls="homeOneNavigationMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" id="homeOneNavigationMenu">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title">Offcanvas</h5>
-                <button type="button" class="button-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="button-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="M19 12H5m14 0l-4 4m4-4l-4-4" />
+                    </svg>
+                </button>
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -59,8 +63,8 @@
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
-                <div class="header-buttons">
-                    <button class="button button-outline" id="searchToggler" type="button" title="Search">
+                <div class="header-buttons text-center text-lg-start mt-5 mt-lg-0">
+                    <button class="button button-outline d-none d-lg-inline-block" id="searchToggler" data-toggle="search-popup" type="button" title="Search">
                         <i class="bx bx-search"></i>
                     </button>
                     <a href="contact.html" class="button button-main">Make Appointment</a>

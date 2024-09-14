@@ -37,7 +37,7 @@ $(function () {
      * ==================================================================================
      * [3] - Pop-Up Search From Navbar Button
      */
-    const searchToggler = $("#searchToggler");
+    const searchToggler = $("[data-toggle=\"search-popup\"]");
     const searchForm = $(".search-form");
     const searchFormCloseBtn = $(".search-form .close-btn");
 

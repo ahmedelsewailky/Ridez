@@ -1,0 +1,32 @@
+.swiper-control-buttons {
+    position: relative;
+    width: 100%;
+    height: 46px;
+
+    &>div {
+        width: 45px;
+        height: 45px;
+        display: inline-grid;
+        place-content: center;
+        position: relative;
+        color: var(--dark-color);
+        border-radius: 50%;
+        margin-right: 5px;
+
+        &:hover {
+            background-color: whitesmoke;
+        }
+
+        &::after {
+            content: none;
+        }
+    }
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: auto;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: auto;
+}
