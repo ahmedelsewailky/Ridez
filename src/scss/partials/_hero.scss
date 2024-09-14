@@ -48,12 +48,13 @@
 
         h6 {
             $color: var(--main-color);
-            color: $color;
+            color: var(--main-color);
             text-transform: uppercase;
             font-weight: 300;
             letter-spacing: 2px;
-            margin-bottom: 8px;
+            margin-bottom: 18px;
             position: relative;
+            font-size: 18px;
 
             &::before {
                 content: '';
@@ -69,7 +70,8 @@
         h1 {
             font-weight: 700;
             text-transform: capitalize;
-            font-size: 50px;
+            font-size: 57px;
+            margin: 26px 0;
 
             span {
                 -webkit-text-fill-color: transparent;
@@ -80,6 +82,8 @@
         p {
             margin: 16px 0;
             line-height: 28px;
+            font-size: 18px;
+            margin-bottom: 32px;
         }
 
         .btn {
