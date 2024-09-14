@@ -1,0 +1,51 @@
+.about-content .images {
+    position: relative;
+}
+
+.about-content .images img:nth-child(2) {
+    position: absolute;
+    left: 30%;
+    top: 25%;
+    border: 10px solid white;
+    animation: moveX 8s linear infinite;
+}
+
+@keyframes moveX {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.about-content .section-title {
+    font-size: 48px;
+    margin-bottom: 32px;
+}
+
+.ab-ct-item .icon {
+    display: grid;
+    place-content: center;
+    width: 100px;
+    height: 55px;
+    background-color: var(--dark-color);
+    margin-right: 1rem;
+    border-radius: 6px;
+    color: whitesmoke;
+    font-size: 28px;
+}
+
+.ab-ct-item .text p {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.ab-ct-item {
+    margin-top: 1.5rem;
+}

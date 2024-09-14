@@ -10,27 +10,27 @@
     &.show {
         bottom: 16px;
     }
-}
 
-.back-top-button svg {
-    width: 14px;
-}
+    svg {
+        width: 14px;
+    }
 
-.back-top-button span.text {
-    padding: 6px;
-    display: block;
-    background-color: #6c757d;
-    color: white;
-    text-transform: uppercase;
-    font-size: 12px;
-    line-height: 8px;
-    font-weight: 600;
-}
+    .text {
+        padding: 6px;
+        display: block;
+        background-color: #6c757d;
+        color: white;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 8px;
+        font-weight: 600;
+    }
 
-span.icon {
-    display: block;
-    padding: 5px 12px;
-    color: white;
-    background-color: var(--main-color);
-    border-bottom: 1px solid white;
+    .icon {
+        display: block;
+        padding: 5px 12px;
+        color: white;
+        background-color: var(--main-color);
+        border-bottom: 1px solid white;
+    }
 }
