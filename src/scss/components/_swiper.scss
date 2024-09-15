@@ -6,12 +6,22 @@
 
     &>div {
         color: var(--dark-color);
-        margin-right: 5px;
         display: inline-flex;
         align-items: center;
-        width: max-content;
+        width: 35px;
         position: relative;
         font-size: 12px;
+        height: 35px;
+        background-color: whitesmoke;
+        margin: -9px 5px 0 0;
+        transition: 0.3s ease;
+        border: 1px solid transparent;
+
+        &:hover {
+            background-color: transparent;
+            color: var(--dark-color);
+            border-color: var(--dark-color);
+        }
 
         svg {
             width: 16px;
@@ -30,25 +40,4 @@
 
 .swiper-button-prev, .swiper-rtl .swiper-button-next {
     left: auto;
-}
-
-.swiper-control-buttons > div span {
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s ease;
-    color: var(--main-color);
-}
-
-.swiper-control-buttons > div:nth-child(1) span {
-    transform: translateX(-10px);
-}
-
-.swiper-control-buttons > div:nth-child(2) span {
-    transform: translateX(10px);
-}
-
-.swiper-control-buttons > div:hover > span {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0px);
 }
