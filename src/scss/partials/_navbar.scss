@@ -42,7 +42,6 @@
         font-size: 15px;
         transition: 0.3s ease;
         padding: 14px 24px;
-        color: #7c7c7c;
         font-weight: 400;
 
         .dropdown-menu li:last-child & {
@@ -139,7 +138,6 @@
     }
 
 
-
     .dropdown:has(.dropdown-menu) .nav-link {
         &::after {
             content: "+";
@@ -179,5 +177,14 @@
             background-color: rgb(255,255,255,0.03);
             color: white;
         }
+    }
+
+    .search-toggler {
+        background-color: transparent;
+        border: none;
+        margin-left: auto;
+        font-size: 19px;
+        padding: 0;
+        margin-right: 7px;
     }
 }

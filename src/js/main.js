@@ -12,7 +12,18 @@ $(function () {
         } else {
             $('#backToTop').removeClass("show");
         }
+
+        // Calculate scroll progress
+        var scrollTop = $(this).scrollTop();
+        var docHeight = $(document).height() - $(window).height();
+        var scrollPercent = (scrollTop / docHeight) * 100;
+        var circleCircumference = 2 * Math.PI * 45; // Circumference of the circle
+
+        // Update stroke-dashoffset to reflect scroll progress
+        var strokeDashoffset = circleCircumference - (scrollPercent / 100 * circleCircumference);
+        $('#progress-border circle').css('stroke-dashoffset', strokeDashoffset);
     });
+
     $('#backToTop').click(function () {
         $('html, body').animate({ scrollTop: 0 }, 800);
         return false;
@@ -64,53 +75,6 @@ $(function () {
     }
 
 
-
-    /**
-     * ==================================================================================
-     * [5] - Counter Up
-     */
-    function animateCounter(element, start, end, duration) {
-        $({ count: start }).animate({ count: end }, {
-            duration: duration,
-            easing: 'swing',
-            step: function () {
-                $(element).text(Math.floor(this.count));
-            },
-            complete: function () {
-                $(element).text(this.count);
-            }
-        });
-    }
-
-    function isScrolledIntoView(elem) {
-        var docViewTop = $(window).scrollTop();
-        var docViewBottom = docViewTop + $(window).height();
-        var elemTop = $(elem).offset().top;
-        var elemBottom = elemTop + $(elem).height();
-        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-    }
-
-    // لتتبع العدادات التي بدأت
-    var countersStarted = [];
-
-    $(window).on('scroll', function () {
-        $('.counter').each(function () {
-            var $counter = $(this);
-
-            // التحقق إذا كان العداد قد بدأ بالفعل
-            if (!countersStarted.includes($counter[0]) && isScrolledIntoView($counter)) {
-                var endValue = parseInt($counter.data('ridez-number'));
-                animateCounter($counter, 0, endValue, 2000, 'swing');
-
-                // إضافة العداد إلى القائمة حتى لا يتكرر
-                countersStarted.push($counter[0]);
-            }
-        });
-    });
-
-
-
-
     /**
      * ==================================================================================
      * [6] - Tab Bane Preloader Effect
@@ -133,5 +97,34 @@ $(function () {
                 $('.nav-tab-preloader').fadeOut('fast');
             }, 500); // Adjust timing as needed
         });
+    });
+
+
+
+    /**
+     * ==================================================================================
+     * Trigger Odometer plugin
+     */
+    function initializeOdometers() {
+        $('.odometer').each(function () {
+            const count_number = $(this).data('number');
+            $(this).text(count_number);
+        });
+    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Trigger the odometer animation when it is visible
+                const odometerElement = $(entry.target);
+                if (!odometerElement.hasClass('animated')) {
+                    odometerElement.addClass('animated');
+                    const count_number = odometerElement.data('number');
+                    odometerElement.text(count_number);
+                }
+            }
+        });
+    });
+    $('.odometer').each(function () {
+        observer.observe(this);
     });
 });

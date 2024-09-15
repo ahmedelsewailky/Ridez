@@ -37,6 +37,15 @@
                 border-color: var(--main-color);
                 color: var(--main-color);
             }
+
+            @media (max-width: 992px) {
+                & {
+                    font: {
+                        size: 19px;
+                        weight: 400;
+                    }
+                }
+            }
         }
     }
 

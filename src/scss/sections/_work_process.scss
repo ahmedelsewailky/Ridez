@@ -23,7 +23,7 @@
                 height: 101%;
                 left: 0;
                 top: 0;
-                border: 1px solid #eee;
+                border: 1px solid #dee2e6;
                 z-index: -1;
             }
 
@@ -86,4 +86,19 @@
         }
     }
 
+}
+
+.circle-arrow-button .arrow-icon--circle {
+    transition: stroke-dashoffset 0.3s ease;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
+}
+
+.nav-pills button:hover .arrow-icon--circle,
+.nav-pills button.active .arrow-icon--circle {
+    stroke-dashoffset: 0;
+}
+
+.nav-pills button.active .circle-arrow-button g {
+    stroke: white;
 }

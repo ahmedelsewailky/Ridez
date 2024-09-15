@@ -53,19 +53,20 @@
             }
         }
 
-        button {
-            border-radius: 0;
+        button, button:active {
+
+            border-radius: 3px;
             font-size: 13px;
             position: absolute;
             right: 11px;
             bottom: -15px;
             line-height: 25px;
-            background-color: var(--main-color);
-            border-color: var(--main-color);
+            background-color: var(--main-color) !important;
+            border-color: var(--main-color) !important;
 
             &:hover {
-                background-color: var(--dark-color);
-                border-color: var(--main-color);
+                background-color: var(--dark-color) !important;
+                border-color: var(--main-color) !important;
             }
         }
     }

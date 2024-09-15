@@ -6,31 +6,46 @@
     bottom: -100%;
     z-index: 10;
     transition: 0.5s ease;
+    font-size: 13px;
 
     &.show {
         bottom: 16px;
-    }
-
-    svg {
-        width: 14px;
-    }
-
-    .text {
-        padding: 6px;
-        display: block;
-        background-color: #6c757d;
-        color: white;
-        text-transform: uppercase;
-        font-size: 12px;
-        line-height: 8px;
-        font-weight: 600;
+        background: white;
+        border-radius: 100%;
     }
 
     .icon {
-        display: block;
-        padding: 5px 12px;
-        color: white;
-        background-color: var(--main-color);
-        border-bottom: 1px solid white;
+        width: 55px;
+        height: 55px;
+        display: grid;
+        place-content: center;
     }
+
+    svg {
+        width: 15px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: -4px;
+        fill: var(--main-color)
+    }
+}
+
+#progress-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: 0; /* Ensure it's behind the button content */
+    pointer-events: none;
+}
+
+#progress-border circle {
+    fill: none;
+    stroke: var(--main-color);
+    stroke-width: 10px;
+    stroke-dasharray: 282.6;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.3s ease;
 }

@@ -2,19 +2,20 @@
     position: relative;
     width: 100%;
     height: 46px;
+    display: flex;
 
     &>div {
-        width: 45px;
-        height: 45px;
-        display: inline-grid;
-        place-content: center;
-        position: relative;
         color: var(--dark-color);
-        border-radius: 50%;
         margin-right: 5px;
+        display: inline-flex;
+        align-items: center;
+        width: max-content;
+        position: relative;
+        font-size: 12px;
 
-        &:hover {
-            background-color: whitesmoke;
+        svg {
+            width: 16px;
+            height: 16px;
         }
 
         &::after {
@@ -29,4 +30,25 @@
 
 .swiper-button-prev, .swiper-rtl .swiper-button-next {
     left: auto;
+}
+
+.swiper-control-buttons > div span {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    color: var(--main-color);
+}
+
+.swiper-control-buttons > div:nth-child(1) span {
+    transform: translateX(-10px);
+}
+
+.swiper-control-buttons > div:nth-child(2) span {
+    transform: translateX(10px);
+}
+
+.swiper-control-buttons > div:hover > span {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
 }
