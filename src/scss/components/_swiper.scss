@@ -3,6 +3,7 @@
     width: 100%;
     height: 46px;
     display: flex;
+    margin-top: 16px;
 
     &>div {
         color: var(--dark-color);
@@ -13,7 +14,7 @@
         font-size: 12px;
         height: 35px;
         background-color: whitesmoke;
-        margin: -9px 5px 0 0;
+        margin-right: 5px;
         transition: 0.3s ease;
         border: 1px solid transparent;
 
